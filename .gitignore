@@ -13,3 +13,13 @@
 
 # Avoid your project being littered with annoying .DS_Store files!
 .DS_Store
+
+# Node modules
+node_modules/
+
+# Sass cache
+.sass-cache/
+
+# Optional: If you have build directories
+dist/
+build/

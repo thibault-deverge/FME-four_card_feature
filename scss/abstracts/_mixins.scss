@@ -1,0 +1,21 @@
+@use "./variables" as var;
+
+@mixin card-border($color) {
+	&::before {
+		content: "";
+		width: 100%;
+		height: 4px;
+		background-color: $color;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+
+@mixin respond-to($breakpoint) {
+	@if $breakpoint == lg {
+		@media (min-width: var.$breakpoint-lg) {
+			@content;
+		}
+	}
+}

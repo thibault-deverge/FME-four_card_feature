@@ -1,0 +1,45 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mixins;
+
+.features {
+	max-width: var.$max-width-features;
+	padding: 0 var.$spacing-medium;
+	margin: 0 auto;
+	margin-bottom: var.$spacing-xl;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+}
+
+.features__title {
+	font-size: var.$fs-large;
+	letter-spacing: 0.17px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	@include mixins.respond-to(lg) {
+		font-size: var.$fs-extra-large;
+	}
+
+	& span:first-child {
+		display: block;
+		font-weight: var.$fw-light;
+	}
+
+	& span:last-child {
+		display: block;
+		font-weight: var.$fw-semibold;
+	}
+}
+
+.features__description {
+	color: var.$color-navy;
+	opacity: 0.5;
+	text-align: center;
+	line-height: 1.67;
+}

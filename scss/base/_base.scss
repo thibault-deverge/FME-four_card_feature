@@ -1,0 +1,22 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mixins;
+
+body {
+	background-color: var.$color-white;
+	font-family: var.$font-primary;
+	font-weight: var.$fw-regular;
+	font-size: var.$fs-small;
+	color: var.$color-navy;
+
+	min-height: 100vh;
+}
+
+main {
+	width: 100%;
+	max-width: 75rem;
+	margin: var.$spacing-huge auto;
+
+	@include mixins.respond-to(lg) {
+		margin: var.$spacing-xxl auto;
+	}
+}
