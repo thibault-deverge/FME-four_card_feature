@@ -74,6 +74,12 @@ main {
   align-items: center;
   gap: 1rem;
 }
+@media (min-width: 63.25rem) {
+  .features {
+    margin-bottom: 4rem;
+    padding: 0;
+  }
+}
 
 .features__title {
   font-size: 1.5rem;
