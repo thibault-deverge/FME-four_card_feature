@@ -11,6 +11,10 @@
 	flex-direction: column;
 	align-items: center;
 	gap: 1rem;
+
+	@include mixins.respond-to(lg) {
+		margin-bottom: 4rem;
+	}
 }
 
 .features__title {
